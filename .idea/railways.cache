@@ -1,0 +1,14 @@
+    intentions GET    /intentions(.:format)          intentions#index
+               POST   /intentions(.:format)          intentions#create
+ new_intention GET    /intentions/new(.:format)      intentions#new
+edit_intention GET    /intentions/:id/edit(.:format) intentions#edit
+     intention GET    /intentions/:id(.:format)      intentions#show
+               PUT    /intentions/:id(.:format)      intentions#update
+               DELETE /intentions/:id(.:format)      intentions#destroy
+         notes GET    /notes(.:format)               notes#index
+               POST   /notes(.:format)               notes#create
+      new_note GET    /notes/new(.:format)           notes#new
+     edit_note GET    /notes/:id/edit(.:format)      notes#edit
+          note GET    /notes/:id(.:format)           notes#show
+               PUT    /notes/:id(.:format)           notes#update
+               DELETE /notes/:id(.:format)           notes#destroy

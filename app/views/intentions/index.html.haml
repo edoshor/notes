@@ -1,0 +1,23 @@
+%h1 Listing intentions
+
+%table#intentions
+  %tr
+    %th Name
+    %th Title
+    %th Content
+    %th
+    %th
+    %th
+
+  - @intentions.each do |intention|
+    %tr
+      %td= intention.name
+      %td= intention.title
+      %td= intention.content
+      %td= link_to 'Show', intention
+      %td= link_to 'Edit', edit_intention_path(intention)
+      %td= link_to 'Destroy', intention, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Intention', new_intention_path
